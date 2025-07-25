@@ -1,0 +1,27 @@
+<div class="main">
+    <label for="execute">execute at</label>
+
+    <select name="mode" [(ngModel)]="mode">
+        <option value="now">Now</option>
+        <option value="date">Date</option>
+        <option value="cron">CRON</option>
+    </select>
+</div>
+
+@switch (mode()) {
+    @case ('date') {
+        <input
+            type="datetime-local"
+            id="execute"
+            [(ngModel)]="date"
+        />
+    }
+    @case ('cron') {
+        <input
+            type="string"
+            id="execute"
+            [ngModel]="cron()"
+            (ngModelChange)="cronChange($event)"
+        />
+    }
+}

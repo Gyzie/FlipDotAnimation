@@ -9,10 +9,11 @@ import { ConceptsComponent } from "./concepts/concepts.component";
 import { displayColumnCount, displayRowCount } from './constants';
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { Concept } from './models';
+import { ExecuteAtComponent } from "./execute-at/execute-at.component";
 
 @Component({
   selector: 'app-root',
-  imports: [Display, Form, FormsModule, LoginComponent, SidebarComponent],
+  imports: [Display, Form, FormsModule, LoginComponent, SidebarComponent, ExecuteAtComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

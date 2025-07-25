@@ -20,16 +20,6 @@ export type Concept = {
 export type CreateMessageDto = Omit<Message, 'id'>;
 export type CreateConceptDto = Omit<Concept, 'id'>;
 
-// export interface FlipDotInfo {
-//   executeAt: string;
-//   frames: Frame[];
-// }
-
-// export interface Frame {
-//   delayMs: number;
-//   pixels: number[][];
-// }
-
 export interface Content {
   pixels: Pixels;
   offsetX: number;

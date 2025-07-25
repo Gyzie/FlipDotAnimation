@@ -35,18 +35,12 @@
     ></app-form>
   } @else {
     <div class="menu">
-      <div class="space">
-        <label for="execute">execute at</label>
-        <input
-          type="datetime-local"
-          id="execute"
-          [ngModel]="execute()"
-          (ngModelChange)="execute.set($event)"
-        />
-      </div>
       @if (!loggedIn()) {
         <small style="color: var(--c-primary)">You must login before you can send your creation</small>
       } @else {
+        <div class="space">
+          <app-execute-at></app-execute-at>
+        </div>
         <button (click)="flipDotService.sendPixels(display.flipdots(), delay(), executeAt())">
           send
         </button>
